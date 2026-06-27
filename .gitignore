@@ -22,7 +22,8 @@ nohup_gpu.out
 .cache/
 huggingface/
 
-# ── End-to-end test harness artifacts ──
+# ── End-to-end test harness (kept local only) ──
+test_palm_pipeline.py       # the harness itself
 test_palm_images/           # 20 sample palm images downloaded for testing
 test_results.json           # most-recent test run output
 test_pipeline_run.log
