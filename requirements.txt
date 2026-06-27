@@ -1,0 +1,24 @@
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.9
+pillow>=10.0.0
+pydantic>=2.0.0
+
+# Local Gemma 4 E2B inference via Hugging Face transformers
+transformers>=5.9.0          # gemma4 architecture support
+accelerate>=0.30.0
+sentencepiece>=0.2.0
+huggingface-hub>=0.24.0
+
+# torch / torchvision: install the variant that matches your hardware.
+# torchvision is REQUIRED — the gemma-4 processor pulls in a video processor.
+# GPU (CUDA 12.8, incl. RTX 50-series/Blackwell):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+# CPU-only:  pip install torch torchvision
+torch>=2.2.0
+torchvision>=0.17.0
+
+# ── End-to-end pipeline test (test_palm_pipeline.py) ────────────────────
+# Only needed if you run the test harness; the running API does not use these.
+pyarrow>=15.0.0          # read the HuggingFace palm dataset parquet
+requests>=2.31.0         # HTTP client used by the test harness

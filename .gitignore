@@ -1,0 +1,38 @@
+# ── Python bytecode / build artifacts ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Virtual environment (the venv lives at ./palm_astro/) ──
+palm_astro/
+.venv/
+venv/
+env/
+
+# ── Runtime output not worth committing ──
+logs/                       # per-day app log files
+request_logs/               # every request's input image + JSON record
+nohup_gpu.out
+*.log
+
+# ── HuggingFace cache (model weights, ~10 GB) ──
+.cache/
+huggingface/
+
+# ── End-to-end test harness artifacts ──
+test_palm_images/           # 20 sample palm images downloaded for testing
+test_results.json           # most-recent test run output
+test_pipeline_run.log
+test_palm.parquet           # 180 MB cached HF dataset sample
+
+# ── Old past-life feature storage (delete if unused) ──
+past_life_storage/
+
+# ── Editor / OS junk ──
+.vscode/
+.idea/
+*.swp
+.DS_Store
