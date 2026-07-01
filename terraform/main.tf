@@ -1,3 +1,23 @@
+# ═════════════════════════════════════════════════════════════════════
+# ⚠️  RETIRED / DECOMMISSIONED — 2026-07-01
+# ─────────────────────────────────────────────────────────────────────
+# The Palm-Reader app was CONSOLIDATED onto the Past-Life GPU box
+# (instance i-07d3af0a96c205a0b, EIP 52.66.61.154) to share one A10G and
+# save a g5.xlarge. It now runs there as the `todozee-palm-reader.service`
+# systemd unit on :7003, fronted by that box's Caddy at
+# palmreader.chatbucket.chat. This stack's OWN instance
+# (i-0221ff9019e7d8a1e) has been STOPPED and kept only as a short-term
+# rollback safety net — it is intentionally NOT destroyed yet.
+#
+# This config is deliberately left INTACT (resources not removed) so that:
+#   • a stray `terraform apply` does NOT destroy the stopped rollback box, and
+#   • `terraform destroy` remains available for a clean teardown when ready.
+#
+# ➜ To fully decommission once Past-Life is proven stable, follow
+#   DECOMMISSIONED.md (essentially: `terraform destroy` in this dir).
+#   The Palm-Reader app is now owned by the Past-Life repo's Terraform.
+# ═════════════════════════════════════════════════════════════════════
+
 # ─────────────────────────────────────────────────────────────────────
 # Networking — default VPC / subnet (EC2 + EIP pattern)
 # ─────────────────────────────────────────────────────────────────────
